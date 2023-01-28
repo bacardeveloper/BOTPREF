@@ -1,0 +1,19 @@
+{
+  "name": "scratool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.5",
+    "nodemon": "^2.0.20",
+    "print_console_log": "^1.1.0",
+    "puppeteer": "^19.6.2",
+    "webdriverio": "^8.3.0"
+  }
+}
