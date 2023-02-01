@@ -1,11 +1,12 @@
 const TelegramBot = require("node-telegram-bot-api");
 const { verifyOpen } = require("./verify_open");
 const { print } = require("print_console_log");
+require("dotenv").config();
 
 let token_api = "6010559605:AAEW_RLs9PwiI2He7cwUPcARB_RDXvnWn24";
 let bot = new TelegramBot(token_api, { polling: true });
 
-exports.sendMessage = async () => {
+exports.launchBot = async () => {
   bot.onText(/\start/, (msg, match) => {
     const chatId = msg.chat.id;
     const resp = match[1];
@@ -22,7 +23,8 @@ exports.sendMessage = async () => {
 
     setInterval(async () => {
       let valeur = await verifyOpen();
-      if(!valeur.booleanRtr){
+      if (valeur.booleanRtr) {
+        // !valeur.booleanRtr
         bot.sendMessage(chatId, "Les RDV sont ouverts");
       }
     }, 60000); // changer tous les 11min

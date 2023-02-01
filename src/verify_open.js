@@ -26,11 +26,10 @@ exports.verifyOpen = async () => {
     await browser.deleteSession();
     return booleanCompare;
     // print(booleanCompare);
-
     
   } catch (e) {
     browser.deleteSession();
-    return { booleanRtr: true, message: "erreur site bug" };
+    return { booleanRtr: true, message: "erreur le site bug" };
   }
 };
 
