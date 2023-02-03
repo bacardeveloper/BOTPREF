@@ -3,7 +3,8 @@ const { verifyOpen } = require("./verify_open");
 const { print } = require("print_console_log");
 require("dotenv").config();
 
-let token_api = "6010559605:AAEW_RLs9PwiI2He7cwUPcARB_RDXvnWn24";
+const apiKeyTelegram = process.env.API_KEY_TELEGRAM;
+let token_api = apiKeyTelegram;
 let bot = new TelegramBot(token_api, { polling: true });
 
 exports.launchBot = async () => {
