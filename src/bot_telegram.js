@@ -23,8 +23,7 @@ exports.launchBot = async () => {
 
     setInterval(async () => {
       let valeur = await verifyOpen();
-      if (valeur.booleanRtr) {
-        // !valeur.booleanRtr
+      if (!valeur.booleanRtr) {
         bot.sendMessage(chatId, "Les RDV sont ouverts");
       }
     }, 60000); // changer tous les 11min
