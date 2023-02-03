@@ -5,7 +5,7 @@ Ce programme permet une fois relier avec votre bot telegram : de verifier si les
 Elle pourra evolué avec un autre module de scrapping, celui embarqué est obligé de ouvrir une fenetre de navigation.
 
 ## Etapes
-### Installer node et npm
+#### Installer node et npm
 Rendez vous sur le site de nodeJs pour installer nodeJs et npm.
 
 #### Créer le fichier env et ajouter votre clé d'API
